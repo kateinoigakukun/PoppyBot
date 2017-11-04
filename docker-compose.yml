@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    build: .
+    environment:
+      SLACK_TOKEN: "${SLACK_TOKEN}"
+      POPPY_ENV: production
+      TZ: 'Asia/Tokyo'
+    ports:
+      - '5080:8080'

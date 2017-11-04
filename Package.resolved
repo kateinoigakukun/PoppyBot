@@ -1,0 +1,214 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CSQLite",
+        "repositoryURL": "https://github.com/vapor/csqlite.git",
+        "state": {
+          "branch": null,
+          "revision": "54e7b3367e4404e0a6e7017b7ee541426125ca74",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "Core",
+        "repositoryURL": "https://github.com/vapor/core.git",
+        "state": {
+          "branch": null,
+          "revision": "661a105e25a8d84cb61f268c0b6ed85834493761",
+          "version": "1.1.2"
+        }
+      },
+      {
+        "package": "Cron",
+        "repositoryURL": "https://github.com/Ponyboy47/Cron-Swift.git",
+        "state": {
+          "branch": null,
+          "revision": "e2e1aa9c8741c8defa9d5efd655d5fecd13b5bc6",
+          "version": "1.2.2"
+        }
+      },
+      {
+        "package": "FeedKit",
+        "repositoryURL": "https://github.com/nmdias/FeedKit.git",
+        "state": {
+          "branch": null,
+          "revision": "8640db44e3ad3f09cab0a6bb42a65438b25f4c12",
+          "version": "7.0.1"
+        }
+      },
+      {
+        "package": "Fluent",
+        "repositoryURL": "https://github.com/vapor/fluent.git",
+        "state": {
+          "branch": null,
+          "revision": "e06c58d1c8bf0e6fe65f4fdd6cc03b70800a6869",
+          "version": "1.4.3"
+        }
+      },
+      {
+        "package": "FluentSQLite",
+        "repositoryURL": "https://github.com/vapor/sqlite-driver.git",
+        "state": {
+          "branch": null,
+          "revision": "d897d2c7668518250d9c259c26f2e2ac9a432e2b",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "Kanna",
+        "repositoryURL": "https://github.com/tid-kijyun/Kanna.git",
+        "state": {
+          "branch": "feature/v4.0.0",
+          "revision": "58e3513d20cd16fe8b9ff16b5a2b481fcd643499",
+          "version": null
+        }
+      },
+      {
+        "package": "Node",
+        "repositoryURL": "https://github.com/vapor/node.git",
+        "state": {
+          "branch": null,
+          "revision": "4cf8c76c1195b29e36c7d37ca056d8fa5433e957",
+          "version": "1.0.1"
+        }
+      },
+      {
+        "package": "PathIndexable",
+        "repositoryURL": "https://github.com/vapor/path-indexable.git",
+        "state": {
+          "branch": null,
+          "revision": "0aa6f6eb151ce5747509ca6591cf6a4379e72851",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "Polymorphic",
+        "repositoryURL": "https://github.com/vapor/polymorphic.git",
+        "state": {
+          "branch": null,
+          "revision": "43ad0c4ce02cff79fbdf33977c2a9599835d4dde",
+          "version": "1.0.1"
+        }
+      },
+      {
+        "package": "Rexy",
+        "repositoryURL": "https://github.com/vadymmarkov/Rexy.git",
+        "state": {
+          "branch": null,
+          "revision": "8b8e8a41e6e43dff9696629e48b2cbd840adc9ab",
+          "version": "0.7.0"
+        }
+      },
+      {
+        "package": "SKClient",
+        "repositoryURL": "https://github.com/SlackKit/SKClient",
+        "state": {
+          "branch": null,
+          "revision": "2647133dc584b835924941222178c27cf14e6ba1",
+          "version": "4.0.1"
+        }
+      },
+      {
+        "package": "SKCore",
+        "repositoryURL": "https://github.com/SlackKit/SKCore",
+        "state": {
+          "branch": null,
+          "revision": "a5fc6bb9ed9cd24a1b7fc3f7b3b23180f23c3282",
+          "version": "4.0.4"
+        }
+      },
+      {
+        "package": "SKRTMAPI",
+        "repositoryURL": "https://github.com/SlackKit/SKRTMAPI",
+        "state": {
+          "branch": null,
+          "revision": "d5e1fc5444f4d8eaefe2c2438b7154dae617faf8",
+          "version": "4.0.3"
+        }
+      },
+      {
+        "package": "SKServer",
+        "repositoryURL": "https://github.com/SlackKit/SKServer",
+        "state": {
+          "branch": null,
+          "revision": "04c980a33c9bf909724841408b90dcce08bc4e3f",
+          "version": "4.0.1"
+        }
+      },
+      {
+        "package": "SKWebAPI",
+        "repositoryURL": "https://github.com/SlackKit/SKWebAPI",
+        "state": {
+          "branch": null,
+          "revision": "c1b6169a3f7ca140e37d59dc7b29993221202f3b",
+          "version": "4.0.7"
+        }
+      },
+      {
+        "package": "SQLite",
+        "repositoryURL": "https://github.com/vapor/sqlite.git",
+        "state": {
+          "branch": null,
+          "revision": "45ca240a66739e44e4a730d7467a068b1623a5be",
+          "version": "1.0.2"
+        }
+      },
+      {
+        "package": "SSCZLib",
+        "repositoryURL": "https://github.com/daltoniam/zlib-spm.git",
+        "state": {
+          "branch": null,
+          "revision": "83ac8d719a2f3aa775dbdf116a57f56fb2c49abb",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "SSCommonCrypto",
+        "repositoryURL": "https://github.com/daltoniam/common-crypto-spm",
+        "state": {
+          "branch": null,
+          "revision": "2eb3aff0fb57f92f5722fac5d6d20bf64669ca66",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "SlackKit",
+        "repositoryURL": "https://github.com/SlackKit/SlackKit.git",
+        "state": {
+          "branch": null,
+          "revision": "43dda4a2f0e8e5231c10660d60899e43ead582d7",
+          "version": "4.0.1"
+        }
+      },
+      {
+        "package": "Starscream",
+        "repositoryURL": "https://github.com/daltoniam/Starscream",
+        "state": {
+          "branch": null,
+          "revision": "21678c9426dde2a77152a0d5982cdb952baf0455",
+          "version": "2.1.1"
+        }
+      },
+      {
+        "package": "SwiftClibxml2",
+        "repositoryURL": "https://github.com/tid-kijyun/SwiftClibxml2.git",
+        "state": {
+          "branch": null,
+          "revision": "c4e67cc970273fc2bee978d12e422974ff184de7",
+          "version": "1.0.2"
+        }
+      },
+      {
+        "package": "Swifter",
+        "repositoryURL": "https://github.com/httpswift/swifter.git",
+        "state": {
+          "branch": null,
+          "revision": "31ffd9b31f8eaf45d34d7b55a40bba08e3ce1b96",
+          "version": "1.3.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

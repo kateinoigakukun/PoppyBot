@@ -1,0 +1,15 @@
+stages:
+  - build
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - docker-compose build
+
+deploy_job:
+  stage: deploy
+  script:
+    - docker-compose up
+  only:
+    - master
