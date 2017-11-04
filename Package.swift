@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "poppy-bot-swift",
+    name: "PoppyBot",
     dependencies: [
         .package(url: "https://github.com/SlackKit/SlackKit.git", from: Version(4,0,0)),
         .package(url: "https://github.com/Ponyboy47/Cron-Swift.git", from: Version(1,0,0)),

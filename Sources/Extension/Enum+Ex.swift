@@ -1,6 +1,6 @@
 //
 //  Enum+Ex.swift
-//  poppy-bot-swiftPackageDescription
+//  PoppyBotPackageDescription
 //
 //  Created by SaitoYuta on 2017/11/03.
 //
