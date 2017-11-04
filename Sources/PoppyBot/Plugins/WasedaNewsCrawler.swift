@@ -16,7 +16,7 @@ class WasedaNewsCrawler: CronJobPlugin {
     var pattern: String { return "0 0 */1 * * *" }
 
     func execute(with bot: SlackKit) throws {
-        guard let items = try fetchNewItems() else { return }
+        let items = try fetchNewItems()
         let attachments = items.map(makeAttachment(for: ))
         bot.webAPI?.sendMessage(channel: "#bot", text: "", attachments: attachments, success: nil, failure: nil)
     }
@@ -26,7 +26,7 @@ class WasedaNewsCrawler: CronJobPlugin {
     private var url: URL { return baseURL.appendingPathComponent("/school/shs/news/") }
     private let itemXPath: String = "//*[@id=\"anc_pagetop\"]/div[5]/div/div[3]/div/div[2]/div"
 
-    func fetchNewItems() throws -> [WasedaNewsItem]? {
+    func fetchNewItems() throws -> [WasedaNewsItem] {
         let html = try HTML(url: url, encoding: .utf8)
         let items: [WasedaNewsItem] = try html.xpath(itemXPath).flatMap { node -> WasedaNewsItem? in
 

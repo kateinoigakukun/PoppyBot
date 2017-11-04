@@ -30,5 +30,6 @@ let package = Package(
         ]),
         .target(name: "Logger", dependencies: ["SlackKit"]),
         .target(name: "Extension"),
+        .testTarget(name: "PoppyBotTests", dependencies: ["PoppyBot"])
     ]
 )

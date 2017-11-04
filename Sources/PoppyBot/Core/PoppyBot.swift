@@ -1,12 +1,26 @@
+//
+//  PoppyBot.swift
+//  PoppyBot
+//
+//  Created by SaitoYuta on 2017/11/04.
+//
+//
 
 import SlackKit
-import Foundation
 import Model
+import Foundation
 
 class PoppyBot {
 
     private lazy var database: DatabaseCore = {
-        return SQLiteDatabase.generate(with: self.models, logger: Environment.current.logger)
+        do {
+            return try SQLiteDatabase.generate(
+                with: FileManager.default.asuha.generatePath("./data/database.sqlite"),
+                models: self.models, logger: Environment.current.logger)
+        } catch let error {
+            Environment.current.logger.log(.fatal, message: error.localizedDescription)
+            fatalError(error.localizedDescription)
+        }
     }()
 
     // MARK: - Runner

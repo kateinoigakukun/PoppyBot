@@ -1,6 +1,6 @@
 //
-//  Model+Ex.swift
-//  PoppyBotPackageDescription
+//  Model.swift
+//  Model
 //
 //  Created by SaitoYuta on 2017/11/03.
 //

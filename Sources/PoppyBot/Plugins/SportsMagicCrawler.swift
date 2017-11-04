@@ -1,8 +1,9 @@
 //
 //  SportsMagicCrawler.swift
-//  PoppyBotPackageDescription
+//  PoppyBot
 //
 //  Created by SaitoYuta on 2017/11/03.
+//
 //
 
 import Foundation
@@ -25,7 +26,7 @@ final class SportsMagicCrawler: CronJobPlugin {
 
     private let rssURL: URL = URL.init(string: "http://feedblog.ameba.jp/rss/ameblo/sports-magic/rss20.xml")!
 
-    private func fetchNewItems() -> [SportsMagicArticleItem] {
+    func fetchNewItems() -> [SportsMagicArticleItem] {
 
         guard let feed = FeedParser.init(URL: rssURL) else { return [] }
         let items: [SportsMagicArticleItem]? = {

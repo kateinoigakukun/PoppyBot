@@ -1,6 +1,6 @@
 import XCTest
-@testable import poppy_bot_swiftTests
+@testable import PoppyBotTests
 
 XCTMain([
-    testCase(poppy_bot_swiftTests.allTests),
+    testCase(PoppyBotTests.allTests),
 ])

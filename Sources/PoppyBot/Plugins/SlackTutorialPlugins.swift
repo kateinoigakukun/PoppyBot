@@ -1,5 +1,5 @@
 //
-//  Plugins.swift
+//  SlackTutorialPlugins.swift
 //  PoppyBot
 //
 //  Created by SaitoYuta on 2017/09/02.

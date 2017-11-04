@@ -1,39 +1,33 @@
 //
 //  Database.swift
-//  PoppyBot
+//  Model
 //
 //  Created by SaitoYuta on 2017/09/03.
 //
 //
 
-
-import Extension
-import FluentSQLite
-import Foundation
-import Fluent
 import Logger
+import Fluent
 
 public struct DatabaseCore {
     var database: Database
     let driver: Driver
-    let logger: Logger
 
     init(driver: Driver, models: [Model.Type], logger: Logger) {
         self.driver = driver
         self.database = .init(driver)
-        self.logger = logger
 
-        setup(models: models)
+        do {
+            try setup(models: models)
+        } catch let error {
+            logger.log(.verbose, message: error.localizedDescription)
+        }
     }
 
-    mutating func setup(models: [Model.Type]) {
-        models.forEach {
-            do {
-                try $0.prepare(self.database)
-            } catch let error {
-                logger.log(.verbose, message: error.localizedDescription)
-            }
-            $0.database = self.database
+    mutating func setup(models: [Model.Type]) throws {
+        try models.forEach { model in
+            defer { model.database = self.database }
+            try model.prepare(self.database)
         }
     }
 }

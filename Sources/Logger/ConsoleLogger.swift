@@ -1,6 +1,6 @@
 //
 //  ConsoleLogger.swift
-//  PoppyBotPackageDescription
+//  Logger
 //
 //  Created by SaitoYuta on 2017/11/04.
 //
