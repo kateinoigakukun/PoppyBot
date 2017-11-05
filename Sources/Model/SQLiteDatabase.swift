@@ -12,7 +12,7 @@ import Logger
 public struct SQLiteDatabase {
 
     public static func generate(with path: String, models: [Model.Type], logger: Logger) throws -> DatabaseCore {
-        let driver = try SQLiteDriver.init(path: FileManager.default.asuha.generatePath("./data/database.sqlite"))
+        let driver = try SQLiteDriver.init(path: path)
         let database = DatabaseCore.init(driver: driver, models: models, logger: logger)
         return database
     }

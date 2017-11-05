@@ -15,7 +15,7 @@ class PoppyBot {
     private lazy var database: DatabaseCore = {
         do {
             return try SQLiteDatabase.generate(
-                with: FileManager.default.asuha.generatePath("./data/database.sqlite"),
+                with: FileManager.default.asuha.generatePath("./Database/main.sqlite"),
                 models: self.models, logger: Environment.current.logger)
         } catch let error {
             Environment.current.logger.log(.fatal, message: error.localizedDescription)
