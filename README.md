@@ -25,3 +25,30 @@ docker-compose up
 |:--|:--|
 |`POPPY_ENV`| `development` or `production`. default is `development`|
 |`SLACK_TOKEN`| Slack token|
+
+
+## Model Definition
+
+This project uses `Codable` protocol to define a type safe model struct.
+
+`Codable` make sure that all property keys are declared in `CodingKeys`
+
+If `CodingKeys`'s elements are not enough, compile error occures.
+(ex. `RSSItem does not conform to protocol 'Decodable'`)
+
+
+```swift
+struct RSSItem: Model {
+
+    enum CodingKeys: CodingKey {
+        case title
+        case url
+    }
+
+    let title: String
+    let url: URL
+    
+    ....
+}
+
+```
