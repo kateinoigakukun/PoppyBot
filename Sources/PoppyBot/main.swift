@@ -10,7 +10,7 @@ import Model
 import Foundation
 
 let app = PoppyBot.init(
-    slackPlugins: [PingPongPlugin.init()],
+    slackPlugins: [PingPongPlugin.init(), CronTriggerSlackPlugin.init()],
     cronJobPlugins: [WasedaNewsCrawler.init(), SportsMagicCrawler.init()],
     webPlugins: [HelloWorldRouter.init()],
     models: [WasedaNewsItem.self, SportsMagicArticleItem.self])

@@ -43,7 +43,7 @@ class PoppyBot {
 
     // MARK: - Plugins
     private let slackPlugins: [SlackPlugin]
-    private let cronJobPlugins: [CronJobPlugin]
+    let cronJobPlugins: [CronJobPlugin]
     private let webRouterPlugins: [WebRouterPlugin]
     private let models: [Model.Type]
 

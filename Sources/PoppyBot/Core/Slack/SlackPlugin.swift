@@ -13,18 +13,18 @@ import SlackKit
 protocol SlackPlugin {
 
     func hear(for message: String, with event: Event, bot: SlackKit, client: Client) throws
-    func respond(for mention: String, with event: Event, bot: SlackKit, client: Client) throws
+    func respond(forMention mention: String, with event: Event, bot: SlackKit, client: Client) throws
 }
 
 extension SlackPlugin {
 
     func hear(for message: String, with event: Event, bot: SlackKit, client: Client) throws {}
-    func respond(for mention: String, with event: Event, bot: SlackKit, client: Client) throws {}
+    func respond(forMention message: String, with event: Event, bot: SlackKit, client: Client) throws {}
 
     func response(for message: String, with event: Event, bot: SlackKit, client: Client?) throws {
         guard let client = client else { return }
         if let text = mentionedText(with: message, user: client.authenticatedUser) {
-            try respond(for: text, with: event, bot: bot, client: client)
+            try respond(forMention: text, with: event, bot: bot, client: client)
         } else {
             try hear(for: message, with: event, bot: bot, client: client)
         }

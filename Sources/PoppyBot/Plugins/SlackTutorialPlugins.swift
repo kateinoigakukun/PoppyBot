@@ -10,8 +10,8 @@ import SlackKit
 
 struct PingPongPlugin: SlackPlugin {
 
-    func respond(for mention: String, with event: Event, bot: SlackKit, client: Client) throws {
-        if mention.uppercased() != "PING" { return }
+    func respond(forMention message: String, with event: Event, bot: SlackKit, client: Client) throws {
+        if message.uppercased() != "PING" { return }
         guard let channelId = event.channel?.id else { return }
         bot.webAPI?.sendMessage(channel: channelId, text: "PONG", success: nil, failure: nil)
     }
