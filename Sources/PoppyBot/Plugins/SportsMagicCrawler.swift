@@ -20,7 +20,7 @@ final class SportsMagicCrawler: CronJobPlugin {
         let items = fetchNewItems()
         let attachments = items.map(makeAttachment(for: ))
         bot.webAPI?.sendMessage(channel: Environment.current.notificationChannel, text: "",
-                                attachments: attachments, success: nil, failure: nil)
+                                asUser: true, attachments: attachments, success: nil, failure: nil)
     }
 
 

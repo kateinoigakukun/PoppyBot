@@ -15,13 +15,13 @@ struct CronTriggerSlackPlugin: SlackPlugin {
             let message = """
 \(app.cronJobPlugins.map { $0.jobName }.joined(separator: "\n"))
 """
-            bot.webAPI?.sendMessage(channel: channelId, text: message, success: nil, failure: nil)
+            bot.webAPI?.sendMessage(channel: channelId, text: message, asUser: true, success: nil, failure: nil)
         } else if let regex = "cron run (.+)".regex, regex.isMatch(message) {
             let groups = regex.groups(message)
             guard let jobName = groups.first,
                 let job = app.cronJobPlugins.first(where: { $0.jobName == jobName }) else { return }
             try job.execute(with: bot)
-            bot.webAPI?.sendMessage(channel: channelId, text: "\(jobName) was done", success: nil, failure: nil)
+            bot.webAPI?.sendMessage(channel: channelId, text: "\(jobName) was done", asUser: true, success: nil, failure: nil)
         }
     }
 }

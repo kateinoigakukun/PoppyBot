@@ -14,7 +14,7 @@ struct HelloWorldRouter: WebRouterPlugin {
     var path: String { return "/" }
 
     func response(with request: HttpRequest, bot: SlackKit) -> HttpResponse {
-        bot.webAPI?.sendMessage(channel: Environment.current.logChannel, text: "hello", success: nil, failure: nil)
+        bot.webAPI?.sendMessage(channel: Environment.current.logChannel, text: "hello", asUser: true, success: nil, failure: nil)
         return .ok(.text("Hello World!"))
     }
 }

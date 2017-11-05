@@ -13,7 +13,7 @@ struct PingPongPlugin: SlackPlugin {
     func respond(forMention message: String, with event: Event, bot: SlackKit, client: Client) throws {
         if message.uppercased() != "PING" { return }
         guard let channelId = event.channel?.id else { return }
-        bot.webAPI?.sendMessage(channel: channelId, text: "PONG", success: nil, failure: nil)
+        bot.webAPI?.sendMessage(channel: channelId, text: "PONG", asUser: true, success: nil, failure: nil)
     }
 }
 

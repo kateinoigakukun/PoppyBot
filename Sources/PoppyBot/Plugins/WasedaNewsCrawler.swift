@@ -18,7 +18,7 @@ class WasedaNewsCrawler: CronJobPlugin {
     func execute(with bot: SlackKit) throws {
         let items = try fetchNewItems()
         let attachments = items.map(makeAttachment(for: ))
-        bot.webAPI?.sendMessage(channel: "#bot", text: "", attachments: attachments, success: nil, failure: nil)
+        bot.webAPI?.sendMessage(channel: "#bot", text: "", asUser: true, attachments: attachments, success: nil, failure: nil)
     }
 
 
